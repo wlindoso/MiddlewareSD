@@ -23,7 +23,7 @@ private static void exibirMenu() {
     System.out.println("    7 - Listar Contas Abertas");
     System.out.println("    0 - Sair");
     System.out.println("===========================================");
-    System.out.print("Opção: ");
+    System.out.print("OpÃ§Ã£o: ");
 }    
 
     public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException {
@@ -43,65 +43,65 @@ private static void exibirMenu() {
                     System.out.println("Criar Conta");
                     System.out.print("Informe o nome do cliente:   ");
                     nome = sc.next();
-                    System.out.print("Informe o número da conta:  ");
+                    System.out.print("Informe o nï¿½mero da conta:  ");
                     conta1 = sc.nextInt();
                     if (gerente.criarConta(nome, conta1)) {
                         System.out.println("Conta criada com sucesso!");
                     } else {
-                        System.out.println("Já existe uma Conta com esse número.");
+                        System.out.println("Jï¿½ existe uma Conta com esse nï¿½mero.");
                     }
                     break;
                 case "2":
                     System.out.println("Remover Conta");
-                    System.out.print("Informe o número da conta:    ");
+                    System.out.print("Informe o nï¿½mero da conta:    ");
                     conta = sc.nextInt();
                     if (gerente.removerConta(conta)) {
                         System.out.println("Conta removida com sucesso!");
                     } else {
-                        System.out.println("Não existe uma Conta com esse número.");
+                        System.out.println("Nï¿½o existe uma Conta com esse nï¿½mero.");
                     }
                     break;
                case "3":
                     System.out.println("Depositar dinheiro na Conta");
-                    System.out.print("Informe o número da conta:    ");
+                    System.out.print("Informe o nï¿½mero da conta:    ");
                     conta = sc.nextInt();
                     System.out.print("Qual o valor a ser depositado?    ");
                     valor = sc.nextInt();
                     if (gerente.depositar(conta, valor)) {
                         System.out.println("Deposito efetuado com sucesso!");
                     } else {
-                        System.out.println("Não existe uma Conta com esse número.");
+                        System.out.println("Nï¿½o existe uma Conta com esse nï¿½mero.");
                     }
                     break;
                 case "4":
                     System.out.println("Sacar dinheiro da Conta");
-                    System.out.print("Informe o número da conta:    ");
+                    System.out.print("Informe o nï¿½mero da conta:    ");
                     conta = sc.nextInt();
                     System.out.print("Qual o valor a ser sacado?    ");
                     valor = sc.nextInt();
                     if (gerente.saque(conta, valor)) {
                         System.out.println("Saque efetuado com sucesso!");
                     } else {
-                        System.out.println("Não existe uma Conta com esse número.");
+                        System.out.println("Nï¿½o existe uma Conta com esse nï¿½mero.");
                     }
                     break;
                case "5":
                     System.out.println("Tansferir dinheiro de uma Conta para outra");
-                    System.out.print("Informe o número da Conta que será debitada:  ");
+                    System.out.print("Informe o nï¿½mero da Conta que serï¿½ debitada:  ");
                     conta1 = sc.nextInt();
-                    System.out.print("Informe o número da Conta que será creditada: ");
+                    System.out.print("Informe o nï¿½mero da Conta que serï¿½ creditada: ");
                     conta2 = sc.nextInt();
                     System.out.print("Qual o valor a ser transferido?   ");
                     valor = sc.nextInt();
                     if (gerente.transferir(conta1, conta2, valor)) {
-                        System.out.println("transferência efetuada com sucesso!");
+                        System.out.println("transferï¿½ncia efetuada com sucesso!");
                     } else {
-                        System.out.println("NÃ£o existe saldo suficiente em Conta para efeturar a transferência.");
+                        System.out.println("NÃ£o existe saldo suficiente em Conta para efeturar a transferï¿½ncia.");
                     }
                     break;  
                 case "6":
                     System.out.println("Saldo da Conta");
-                    System.out.print("Informe o número da conta:    ");
+                    System.out.print("Informe o nï¿½mero da conta:    ");
                     conta = sc.nextInt();
                     String dados = gerente.saldo(conta);
                     System.out.println("");
